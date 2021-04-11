@@ -12,10 +12,8 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-triangular-95250',
-      user : '',
-      password : '',
-      database : ''
+      host : process.env.DATABASE_URL,
+      ssl: true,
     }
 });
 
