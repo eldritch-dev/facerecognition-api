@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => { 
-  res.send(`success ${process.env}`);
+  //res.send(`success ${process.env}`);
   console.log(process.env);
 })
 app.post('/signin', signin.handleSignin(db, bcrypt))
